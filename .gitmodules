@@ -1,0 +1,3 @@
+[submodule "src/lib/altv-api"]
+	path = src/lib/altv-api
+	url = https://github.com/indilo53/altv-api

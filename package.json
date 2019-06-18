@@ -1,0 +1,23 @@
+{
+  "name": "altv-freecam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "rollup --config rollup.config.client.js",
+    "build:server": "rollup --config rollup.config.server.js && node scripts/copy src/server/package.json dist/package.json",
+    "deps": "cd dist && npm install",
+    "deploy": "npm run build && npm run deps"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^8.0.1",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-terser": "^5.0.0"
+  }
+}
