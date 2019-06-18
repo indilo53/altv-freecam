@@ -13,12 +13,6 @@ export default {
   },
   plugins: [
     builtins(),
-    autoExternal({
-      builtins: false,
-      dependencies: true,
-      packagePath: path.resolve('./src/server/package.json'),
-      peerDependencies: false,
-    }),
     resolve(),
     json(),
     terser(),
